@@ -1,4 +1,5 @@
 class Song
+<<<<<<< HEAD
   attr_accessor :name
   attr_reader :artist, :genre
   @@all = []
@@ -7,11 +8,24 @@ class Song
     @name = name
     self.artist= artist if artist
     self.genre= genre if genre
+=======
+  attr_accessor :name, :artist
+#  attr_reader
+  @@all = []
+
+  def initialize(name, artist= "")
+    @name = name
+    self.artist= artist
+>>>>>>> 6e47f14bf027e20e61590c622ee751a9865e26cb
     save
   end
 
   def self.all
+<<<<<<< HEAD
     @@all.uniq
+=======
+    @@all
+>>>>>>> 6e47f14bf027e20e61590c622ee751a9865e26cb
   end
 
   def save
@@ -27,6 +41,7 @@ class Song
   end
 
   def artist=(name)
+<<<<<<< HEAD
     @artist = name
     artist.songs << self if !artist.songs.include?(self)
     artist.add_song(self)
@@ -60,4 +75,9 @@ class Song
      new_from_filename(name).save
    end
 
+=======
+    self.artist = name
+  end
+
+>>>>>>> 6e47f14bf027e20e61590c622ee751a9865e26cb
 end#end of class
